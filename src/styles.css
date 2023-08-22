@@ -1,0 +1,9 @@
+/* Tailwind directives  */
+@import "prismjs/plugins/toolbar/prism-toolbar.css";
+/* check node_modules/prismjs/themes/ for the available themes */
+@import "prismjs/themes/prism-tomorrow";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
