@@ -1,18 +1,11 @@
-# Analog Blog Starter
+# Personal site made with Analog and DaisyUI (Tailwind UI lib)
 
-This project was generated with [Analog](https://analogjs.org) and [DaisyUI](https://daisyui.com/)
+This project is my personal site, which contains the code tips I create and my blog.
 
-![image](https://github.com/nelsongutidev/analog-blog/assets/62297014/86efa6f5-e0a7-4a4f-9235-75fa78d8e246)
+## Development server
 
-## Project details
+To run the app locally, run `ng serve`. App will be served on port:5173.
 
-It contains the basic struture to create your own blog site. It has the configuration enabled to prerender the static pages.
+## Angular CLI Explorer
 
-## Deployment
-
-Run `ng build ` and make sure your publish directory points to `dist/analog/public`
-
-## Support the project
-
-- Make sure you visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
-
+This project contains an Angular CLI Explorer, which constructs the desired CLI command after selecting from the available options
