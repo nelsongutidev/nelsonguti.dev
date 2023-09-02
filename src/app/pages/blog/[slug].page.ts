@@ -1,4 +1,3 @@
-// /src/app/pages/blog/posts.[slug].page.ts
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
@@ -60,14 +59,7 @@ export interface PostAttributes {
       </article>
     </ng-container>
   `,
-  styles: [
-    `
-      :host {
-        display: flex;
-        justify-content: center;
-      }
-    `,
-  ],
+  host: { class: 'flex justify-center' },
 })
 export default class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>({

@@ -16,12 +16,17 @@ export default defineConfig(({ mode }) => ({
     analog({
       prerender: {
         routes: [
+          '/',
           '/blog',
-          '/blog/build-analog-blog',
-          '/blog/git-tutorial',
-          '/blog/view-transition-api',
+          '/blog/angular-router-events',
+          '/blog/array-from',
+          '/blog/closures',
+          '/blog/everysome',
+          '/blog/how-to-add-scully',
+          '/blog/markdown-test',
+          '/blog/object-entries',
           '/about',
-          '/contact',
+          '/angular-cli-explorer',
         ],
       },
     }),

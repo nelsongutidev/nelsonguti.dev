@@ -1,12 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
+
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { ThemeService } from './shared/services/theme.service';
+import { NgClass } from '@angular/common';
+import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { AngularLogoComponent } from './shared/components/angular-logo/angular-logo.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent, FooterComponent],
   templateUrl: './app.component.html',
   styles: [
     `
@@ -16,8 +17,23 @@ import { ThemeService } from './shared/services/theme.service';
       }
     `,
   ],
+  imports: [
+    RouterModule,
+    NgClass,
+    SidenavComponent,
+    FooterComponent,
+    AngularLogoComponent,
+  ],
 })
 export class AppComponent {
-  themeService = inject(ThemeService);
-  selectedTheme = this.themeService.selectedTheme;
+  // themeService = inject(ThemeService);
+  // selectedTheme = this.themeService.selectedTheme;
+
+  isMenuClosed = true;
+
+  toggleMenu() {
+    if (!this.isMenuClosed) {
+      this.isMenuClosed = true;
+    }
+  }
 }

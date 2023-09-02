@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
 import { NgFor } from '@angular/common';
 
+// TODO: move this to a shared file and type properly
 export interface PostAttributes {
   title: string;
   slug: string;
@@ -32,49 +33,23 @@ export interface PostAttributes {
             class="card w-96 bg-base-200 shadow-xl"
           >
             <div class="card-body">
-              <a
-                [routerLink]="['/blog', 'posts', post.slug]"
-                class="hover:underline"
-              >
+              <a [routerLink]="['/blog', post.slug]" class="hover:underline">
                 <h2 class="card-title">{{ post?.attributes?.title }}</h2></a
               >
               <p>{{ post?.attributes?.description }}</p>
-              <div class="card-actions justify-end">
-                <div class="relative mt-8 flex items-center gap-x-4">
-                  <img
-                    [src]="post?.attributes?.coverImage"
-                    alt=""
-                    class="object-cover h-12 w-12 rounded-full"
-                  />
-                  <div class="text-sm leading-6">
-                    <p class="font-semibold">
-                      <span class="absolute inset-0"></span>
-                      {{ post?.attributes?.author || 'Nelson Gutierrez' }}
-                    </p>
-                    <p>
-                      {{ post?.attributes?.authorInfo || 'Angular Developer' }}
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   `,
-  styles: [
-    `
-      :host {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-      }
-    `,
-  ],
+  host: { class: 'flex flex-col flex-1' },
 })
-export default class BlogComponent {
-  readonly posts = injectContentFiles<PostAttributes>((contentFile) =>
-    contentFile.filename.includes('/src/content/blog')
-  );
+export default class BlogListComponent {
+  readonly posts = injectContentFiles<PostAttributes>((contentFile: any) => {
+    return (
+      contentFile.filename.includes('/src/content/blog') &&
+      contentFile.attributes.published
+    );
+  });
 }

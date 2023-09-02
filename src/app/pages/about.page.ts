@@ -1,33 +1,69 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   template: `
-    <section class="flex items-center flex-col">
-      <h1 class="font-bold md:text-5xl text-3xl py-8">About</h1>
-      <div class="mockup-code">
-        <pre data-prefix="$"><code>npm create analog@latest</code></pre>
+    <h1
+      class="text-slate-800 text-4xl md:text-6xl tracking-tight lg:px-24 md:py-12 px-6 pt-8"
+    >
+      About me
+    </h1>
 
-        <pre
-          data-prefix=">"
-          class="text-warning"
-        ><code>installing...</code></pre>
-        <pre data-prefix="$"><code>npm run build</code></pre>
-        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    <section class="md:px-24 px-8 py-4">
+      <div class="">
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div>
+            <h1 class="md:text-5xl text-3xl font-bold mb-4">
+              I'm currently working as a Senior Software Engineer at
+
+              <a
+                href="https://www.herodevs.com/"
+                class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
+              >
+                HeroDevs
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </h1>
+
+            <p class="pr-8">
+              I have {{ yearsOfExperience }} years of experience in the software
+              industry. I'm also a big fan of open source software, and I'm
+              always looking for new ways to contribute to the community.
+              Passionate about the Angular framework, my initials are
+              {{ initials }} after all. Some of my hobbies are playing piano and
+              guitar, running, soccer and watching NBA games 🏀. I love spending
+              time with my family, and I'm also a big fan of traveling.
+            </p>
+          </div>
+          <img
+            ngSrc="/images/family.jpeg"
+            class="rounded-lg shadow-2xl"
+            width="270"
+            height="338"
+          />
+        </div>
       </div>
     </section>
   `,
-  styles: [
-    `
-      :host {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-      }
-    `,
-  ],
-  imports: [RouterLink],
+  host: { class: 'flex flex-col flex-1' },
+  imports: [RouterLink, NgOptimizedImage],
 })
-export default class AboutComponent {}
+export default class AboutComponent {
+  yearsOfExperience = new Date().getFullYear() - 2017;
+  initials = '<ng />';
+}
