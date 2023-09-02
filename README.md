@@ -1,4 +1,4 @@
-# Personal site made with Analog and DaisyUI (Tailwind UI lib)
+# Personal site made with Analog and DaisyUI
 
 This project is my personal site, which contains the code tips I create and my blog.
 
