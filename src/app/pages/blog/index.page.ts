@@ -12,6 +12,7 @@ export interface PostAttributes {
 }
 
 @Component({
+  selector: 'app-blog-list',
   standalone: true,
   imports: [RouterOutlet, RouterLink, NgFor],
   template: `
@@ -43,7 +44,6 @@ export interface PostAttributes {
       </div>
     </div>
   `,
-  host: { class: 'flex flex-col flex-1' },
 })
 export default class BlogListComponent {
   readonly posts = injectContentFiles<PostAttributes>((contentFile: any) => {

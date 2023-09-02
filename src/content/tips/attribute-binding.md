@@ -7,6 +7,7 @@ tweetId: ""
 tags: ["Angular"]
 date: "July 3, 2023"
 published: true
+path: attribute-binding
 ---
 
 ## Attribute Binding

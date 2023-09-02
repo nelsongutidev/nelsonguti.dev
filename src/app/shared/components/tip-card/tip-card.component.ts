@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Tip } from 'src/app/pages/tips/tips.component';
 
 @Component({
   selector: 'app-tip-card',
@@ -10,5 +9,5 @@ import { Tip } from 'src/app/pages/tips/tips.component';
   styles: [],
 })
 export class TipCardComponent {
-  @Input() tip!: Tip;
+  @Input() tip!: any; // TODO: type this
 }
