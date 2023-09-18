@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TipCardComponent } from '../../shared/components/tip-card/tip-card.component';
 import { injectContentFiles } from '@analogjs/content';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 @Component({
+  selector: 'app-tips-list',
   standalone: true,
   imports: [TipCardComponent, RouterModule, NgFor],
   template: `
@@ -14,14 +15,6 @@ import { NgFor } from '@angular/common';
       >
         Tips
       </h1>
-      <!-- <mat-radio-group
-    aria-label="Select an option"
-    [(ngModel)]="language"
-    (change)="onLanguageChange()"
-  >
-    <mat-radio-button value="en">EN</mat-radio-button>
-    <mat-radio-button value="es">ES</mat-radio-button>
-  </mat-radio-group> -->
     </div>
 
     <p class="lg:px-24 px-12 text-xl mb-6">
@@ -49,7 +42,9 @@ import { NgFor } from '@angular/common';
       me if you want to see more of them.
     </p>
 
-    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
+    <main
+      class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4 border-t border-base-200"
+    >
       <ng-container *ngFor="let tip of tips">
         <a [routerLink]="tip.slug">
           <app-tip-card class="px-4" [tip]="tip.attributes"></app-tip-card>
@@ -64,5 +59,7 @@ export default class TipsPageComponent {
       contentFile.filename.includes('/src/content/tips') &&
       contentFile.attributes.published
     );
-  });
+  })?.sort((a, b) =>
+    new Date(a.attributes.date) > new Date(b.attributes.date) ? -1 : 1
+  );
 }
