@@ -10,7 +10,7 @@ date: "Apr 18, 2023"
 published: true
 ---
 
-## Svg
+# Svg
 
 You can use SVG files as templates in your Angular applications. When you use an SVG as the template, you are able to use directives and bindings just like with HTML templates.
 
@@ -38,14 +38,7 @@ export class SvgComponent {
 ```html
 <svg>
   <g>
-    <rect
-      x="0"
-      y="0"
-      width="100"
-      height="100"
-      [attr.fill]="fillColor"
-      (click)="changeColor()"
-    />
+    <rect x="0" y="0" width="100" height="100" [attr.fill]="fillColor" (click)="changeColor()" />
     <text x="120" y="50">click the rectangle to change the fill color</text>
   </g>
 </svg>

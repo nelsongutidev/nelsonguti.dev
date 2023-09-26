@@ -9,7 +9,7 @@ date: "Jan 31, 2023"
 published: true
 ---
 
-## bootstrapApplication API
+# bootstrapApplication API
 
 As of Angular v15, you can Bootstrap an Angular application using a standalone component
 

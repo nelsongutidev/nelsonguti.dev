@@ -10,7 +10,7 @@ published: true
 path: attribute-binding
 ---
 
-## Attribute Binding
+# Attribute Binding
 
 Attribute binding in Angular helps you set values for attributes directly. With attribute binding, you can improve accessibility, style your application dynamically, and manage multiple CSS classes or styles simultaneously.
 

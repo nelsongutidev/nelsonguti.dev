@@ -2,7 +2,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SocialsComponent } from '../shared/components/social/social.component';
+import { RouteMeta } from '@analogjs/router';
 
+export const routeMeta: RouteMeta = {
+  title: 'Home',
+};
 @Component({
   selector: 'app-home',
   standalone: true,

@@ -3,7 +3,11 @@ import { TipCardComponent } from '../../shared/components/tip-card/tip-card.comp
 import { injectContentFiles } from '@analogjs/content';
 import { RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { RouteMeta } from '@analogjs/router';
 
+export const routeMeta: RouteMeta = {
+  title: 'Tips',
+};
 @Component({
   selector: 'app-tips-list',
   standalone: true,

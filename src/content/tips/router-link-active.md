@@ -10,32 +10,14 @@ published: true
 date: "Nov 1, 2022"
 ---
 
-## ariaCurrentWhenActive
+# ariaCurrentWhenActive
 
 The RouterLinkActive directive provides the ariaCurrentWhenActive input which sets the aria-current to a specified value when the link becomes active
 
 ```html
 <nav>
-  <a
-    routerLink="home"
-    routerLinkActive="active-page"
-    ariaCurrentWhenActive="page"
-  >
-    Home
-  </a>
-  <a
-    routerLink="about"
-    routerLinkActive="active-page"
-    ariaCurrentWhenActive="page"
-  >
-    About
-  </a>
-  <a
-    routerLink="shop"
-    routerLinkActive="active-page"
-    ariaCurrentWhenActive="page"
-  >
-    Shop
-  </a>
+  <a routerLink="home" routerLinkActive="active-page" ariaCurrentWhenActive="page"> Home </a>
+  <a routerLink="about" routerLinkActive="active-page" ariaCurrentWhenActive="page"> About </a>
+  <a routerLink="shop" routerLinkActive="active-page" ariaCurrentWhenActive="page"> Shop </a>
 </nav>
 ```

@@ -9,7 +9,7 @@ date: "Feb 7, 2023"
 published: true
 ---
 
-## enableTracing and withDebugTracing()
+# enableTracing and withDebugTracing()
 
 <p class="md:my-8">For debugging purposes around router events, Angular provides an easy way to log all internal navigation events to the console</p>
 

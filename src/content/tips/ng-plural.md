@@ -10,7 +10,7 @@ published: true
 date: "Nov 8, 2022"
 ---
 
-## ngPlural
+# ngPlural
 
 In order to make pluralization easier, Angular provides the ngPlural Directive which allows to display a particular template on a given value.
 

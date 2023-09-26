@@ -10,7 +10,7 @@ date: "Dec 13, 2022"
 published: true
 ---
 
-## ngNativeValidate
+# ngNativeValidate
 
 Angular automatically adds the `novalidate` attribute to the `<form>` element whenever FormsModule or ReactiveFormsModule is imported. This prevents the browser from displaying the native DOM validation UI. If you want to explicitly enable native DOM validation UI with Angular forms, you can add the `ngNativeValidate` attribute to the `<form>` element.
 

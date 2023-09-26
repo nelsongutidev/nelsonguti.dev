@@ -10,7 +10,7 @@ date: "August 29, 2023"
 published: true
 ---
 
-## [value] vs [ngValue] in select option
+# [value] vs [ngValue] in select option
 
 Angular provides the NgSelectOption Directive, which contains two inputs: value and ngValue
 

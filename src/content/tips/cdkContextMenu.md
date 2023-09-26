@@ -9,7 +9,7 @@ date: "August 15, 2023"
 published: true
 ---
 
-## CdkContextMenuTrigger
+# CdkContextMenuTrigger
 
 The @angular/cdk/menu module provides directives to help create custom menu interactions based on the WAI ARIA specification.
 

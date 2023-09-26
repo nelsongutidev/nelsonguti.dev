@@ -9,7 +9,7 @@ src: "https://pbs.twimg.com/media/FqEcqjIaIAE-luf?format=jpg&name=small"
 date: "Feb 28, 2023"
 ---
 
-## ng update
+# ng update
 
 Angular's powerful CLI provides the `ng update` command to perform a basic update to the current stable release of the core framework and CLI.
 

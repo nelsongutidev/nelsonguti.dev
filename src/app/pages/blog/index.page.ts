@@ -2,8 +2,16 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
 import { NgFor } from '@angular/common';
+import { titleResolver } from '../../shared/resolvers/title.resolver';
+import { metatagsResolver } from 'src/app/shared/resolvers/metatags.resolver';
+import { RouteMeta } from '@analogjs/router';
 
 // TODO: move this to a shared file and type properly
+
+export const routeMeta: RouteMeta = {
+  title: 'Blog',
+};
+
 export interface PostAttributes {
   title: string;
   slug: string;
@@ -16,7 +24,7 @@ export interface PostAttributes {
   standalone: true,
   imports: [RouterOutlet, RouterLink, NgFor],
   template: `
-    <div class="flex justify-between items-center lg:pr-24 md:pr-12 mr-6">
+    <div class="flex justify-between items-center lg:pr-24 md:pr-12 mr-6 ">
       <h1
         class="text-slate-800 text-4xl md:text-6xl tracking-tight lg:px-24 md:py-12 px-12 py-8"
       >

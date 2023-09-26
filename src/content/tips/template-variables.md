@@ -9,7 +9,7 @@ date: "May 16, 2023"
 published: true
 ---
 
-## Template Variables
+# Template Variables
 
 Template variables help you use data from one part of a template in another part of the template.
 

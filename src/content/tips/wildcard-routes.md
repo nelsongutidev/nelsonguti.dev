@@ -10,7 +10,7 @@ date: "Jan 24, 2023"
 published: true
 ---
 
-## Wildcard Routes
+# Wildcard Routes
 
 To display a 404 page, Angular provides the possibility of adding a wildcard route. The Angular Router selects the wildcard route anytime the requested URL doesn't match any paths for routes defined in the configuration.
 

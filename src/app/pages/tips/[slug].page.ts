@@ -1,7 +1,9 @@
 import { injectContent, MarkdownComponent } from '@analogjs/content';
+import { RouteMeta } from '@analogjs/router';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { titleResolver } from './../../shared/resolvers/title.resolver';
 
 export interface PostAttributes {
   title: string;
@@ -9,6 +11,10 @@ export interface PostAttributes {
   description: string;
   coverImage: string;
 }
+
+export const routeMeta: RouteMeta = {
+  title: titleResolver,
+};
 
 @Component({
   selector: 'app-tip',

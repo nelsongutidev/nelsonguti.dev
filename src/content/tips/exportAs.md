@@ -9,7 +9,7 @@ date: "May 2, 2023"
 published: true
 ---
 
-## exportAs
+# exportAs
 
 The exportAs property defines the name that can be used in the template to assign this directive/component to a variable.
 

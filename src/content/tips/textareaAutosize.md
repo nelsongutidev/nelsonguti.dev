@@ -9,7 +9,7 @@ date: "August 8, 2023"
 published: true
 ---
 
-## cdkTextareaAutosize
+# cdkTextareaAutosize
 
 Angular CDK's TextFieldModule provides useful utilities for working with text input fields such as `input` and `textarea`.
 

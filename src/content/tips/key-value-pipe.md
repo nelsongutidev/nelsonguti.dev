@@ -10,7 +10,7 @@ date: "Jan 17, 2023"
 published: true
 ---
 
-## KeyValuePipe
+# KeyValuePipe
 
 Angular provides the keyvalue pipe, which transforms an Object or Map into an array of key value pairs. With it, an Object or a Map can be iterated by \*ngFor.
 
@@ -19,13 +19,9 @@ Angular provides the keyvalue pipe, which transforms an Object or Map into an ar
   selector: "keyvalue-pipe",
   template: `<span>
     <p>Object</p>
-    <div *ngFor="let item of object | keyvalue">
-      {{ item.key }}:{{ item.value }}
-    </div>
+    <div *ngFor="let item of object | keyvalue">{{ item.key }}:{{ item.value }}</div>
     <p>Map</p>
-    <div *ngFor="let item of map | keyvalue">
-      {{ item.key }}:{{ item.value }}
-    </div>
+    <div *ngFor="let item of map | keyvalue">{{ item.key }}:{{ item.value }}</div>
   </span>`,
 })
 export class KeyValuePipeComponent {

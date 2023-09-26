@@ -9,7 +9,7 @@ date: "August 1, 2023"
 published: true
 ---
 
-## Angular CDK Clipboard
+# Angular CDK Clipboard
 
 Angular CDK's clipboard package provides helpers for working with the system clipboard.
 
