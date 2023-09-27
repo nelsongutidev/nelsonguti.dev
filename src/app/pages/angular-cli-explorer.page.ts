@@ -1,5 +1,6 @@
 import { RouteMeta } from '@analogjs/router';
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../shared/components/header/header.component';
 
 export const routeMeta: RouteMeta = {
   title: 'Angular CLI Explorer',
@@ -8,14 +9,8 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-angular-cli',
   standalone: true,
-  template: `
-    <h1
-      class="text-slate-800 text-4xl md:text-6xl tracking-tight lg:px-24 md:py-12 px-6 pt-8"
-    >
-      Angular CLI Explorer
-    </h1>
-  `,
-  imports: [],
+  imports: [HeaderComponent],
+  template: ` <app-header [title]="'Angular CLI Explorer'" /> `,
 })
 export default class AngularCliExplorerComponent {
   constructor() {}

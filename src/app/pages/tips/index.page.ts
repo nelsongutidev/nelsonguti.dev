@@ -4,6 +4,7 @@ import { injectContentFiles } from '@analogjs/content';
 import { RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
+import { HeaderComponent } from '../../shared/components/header/header.component';
 
 export const routeMeta: RouteMeta = {
   title: 'Tips',
@@ -11,17 +12,11 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-tips-list',
   standalone: true,
-  imports: [TipCardComponent, RouterModule, NgFor],
+  imports: [TipCardComponent, RouterModule, NgFor, HeaderComponent],
   template: `
-    <div class="flex justify-between items-center lg:pr-24 md:pr-12 mr-6">
-      <h1
-        class="text-slate-800 text-4xl md:text-6xl tracking-tight lg:px-24 md:py-12 px-12 py-8"
-      >
-        Tips
-      </h1>
-    </div>
+    <app-header [title]="'Tips'" />
 
-    <p class="lg:px-24 px-12 text-xl mb-6">
+    <p class="lg:px-24 px-12 text-xl mt-6">
       I post these on Twitter.
       <a
         href="https://twitter.com/nelsongutidev"
@@ -46,9 +41,7 @@ export const routeMeta: RouteMeta = {
       me if you want to see more of them.
     </p>
 
-    <main
-      class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4 border-t border-base-200"
-    >
+    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
       <ng-container *ngFor="let tip of tips">
         <a [routerLink]="tip.slug">
           <app-tip-card class="px-4" [tip]="tip.attributes"></app-tip-card>

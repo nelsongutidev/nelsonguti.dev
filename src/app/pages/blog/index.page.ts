@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
 import { NgFor } from '@angular/common';
-import { titleResolver } from '../../shared/resolvers/title.resolver';
-import { metatagsResolver } from 'src/app/shared/resolvers/metatags.resolver';
 import { RouteMeta } from '@analogjs/router';
+import { HeaderComponent } from '../../shared/components/header/header.component';
 
 // TODO: move this to a shared file and type properly
 
@@ -22,19 +21,11 @@ export interface PostAttributes {
 @Component({
   selector: 'app-blog-list',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NgFor],
+  imports: [RouterOutlet, RouterLink, NgFor, HeaderComponent],
   template: `
-    <div class="flex justify-between items-center lg:pr-24 md:pr-12 mr-6 ">
-      <h1
-        class="text-slate-800 text-4xl md:text-6xl tracking-tight lg:px-24 md:py-12 px-12 py-8"
-      >
-        Blog
-      </h1>
-    </div>
+    <app-header [title]="'Blog'" />
 
-    <main
-      class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4 border-t border-base-200"
-    >
+    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
       <div *ngFor="let post of posts" class="card w-96 bg-base-200 shadow-xl ">
         <div class="card-body">
           <a [routerLink]="['/blog', post.slug]" class="hover:underline">
