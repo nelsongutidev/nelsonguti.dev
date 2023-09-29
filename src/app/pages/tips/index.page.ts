@@ -16,7 +16,7 @@ export const routeMeta: RouteMeta = {
   template: `
     <app-header [title]="'Tips'" />
 
-    <p class="lg:px-24 px-12 text-xl mt-6">
+    <p class="lg:px-24 px-12 text-xl mt-12">
       I post these on Twitter.
       <a
         href="https://twitter.com/nelsongutidev"

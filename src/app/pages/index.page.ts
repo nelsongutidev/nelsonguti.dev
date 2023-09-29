@@ -19,22 +19,22 @@ export const routeMeta: RouteMeta = {
       </h1>
       <div class="max-w-xl mb-6 mx-auto text-center px-2">
         <div class="flex-1">
-          <app-socials></app-socials>
+          <app-socials class="mb-6" />
           <p class="font-pt-serif text-2xl mb-6 px-2">
             I write about Front End Development, Angular, RxJS and Javascript
           </p>
-          <div>
+          <div class="flex justify-center gap-x-4">
             <button
               routerLink="/blog"
               routerLinkActive="active"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              class="btn btn-outline btn-primary"
             >
               Read the blog
             </button>
             <button
               routerLink="/tips"
               routerLinkActive="active"
-              class="bg-transparent hover:bg-gray-600 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              class="btn btn-outline btn-neutral"
             >
               Check the tips
             </button>
