@@ -14,11 +14,11 @@ import { TerminalComponent } from '../shared/components/terminal/terminal.compon
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterOptionPipe } from '../shared/data/filter-option.pipe';
 import { MarkdownComponent } from '@analogjs/content';
+import { MatInputModule } from '@angular/material/input';
 
 export const routeMeta: RouteMeta = {
   title: 'Angular CLI Explorer',
@@ -38,10 +38,11 @@ export const routeMeta: RouteMeta = {
     FilterOptionPipe,
     MarkdownComponent,
     MatDialogModule,
+    MatInputModule,
   ],
   template: `
     <app-header [title]="'Angular CLI Explorer'" />
-    <h4 class="lg:px-24 px-6 text-xl mb-4">I need a command that:</h4>
+    <h4 class="lg:px-24 px-6 text-xl my-6">I need a command that:</h4>
     <div class="lg:px-24 px-6 flex flex-col gap-x-4">
       <div class="w-full flex gap-x-2">
         <mat-form-field class="w-full" appearance="fill">
@@ -179,7 +180,10 @@ export const routeMeta: RouteMeta = {
           <p
             class="mb-4 text-base text-neutral-600 dark:text-neutral-200 w-full"
           >
-            <analog-markdown class="markdown" [content]="data.description">
+            <analog-markdown
+              class="markdown description-dialog"
+              [content]="data.description"
+            >
             </analog-markdown>
           </p>
         </div>
