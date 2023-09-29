@@ -14,11 +14,16 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      vite: {
+        inlineStylesExtension: 'scss',
+      },
       prerender: {
         routes: [
           '/',
           '/blog',
           '/tips',
+          '/about',
+          '/angular-cli-explorer',
           '/blog/angular-router-events',
           '/blog/array-from',
           '/blog/closures',
@@ -26,7 +31,6 @@ export default defineConfig(({ mode }) => ({
           '/blog/how-to-add-scully',
           '/blog/markdown-test',
           '/blog/object-entries',
-          '/about',
           '/tips/attribute-binding',
           '/tips/bootstrap-app',
           '/tips/cdkContextMenu',
