@@ -23,7 +23,7 @@ export interface PostAttributes {
   template: `
     <ng-container *ngIf="post$ | async as post">
       <article
-        class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-16 w-full px-4"
+        class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-8 w-full px-4"
       >
         <ng-template [ngTemplateOutlet]="backButton"></ng-template>
         <analog-markdown

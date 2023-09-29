@@ -16,7 +16,7 @@ export const routeMeta: RouteMeta = {
   template: `
     <app-header [title]="'Tips'" />
 
-    <p class="lg:px-24 px-12 text-xl mt-12">
+    <p class="lg:px-24 px-12 text-xl my-12">
       I post these on Twitter.
       <a
         href="https://twitter.com/nelsongutidev"
@@ -41,7 +41,7 @@ export const routeMeta: RouteMeta = {
       me if you want to see more of them.
     </p>
 
-    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
+    <main class="flex flex-wrap justify-center gap-6 mb-6 px-4">
       <ng-container *ngFor="let tip of tips">
         <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
       </ng-container>
