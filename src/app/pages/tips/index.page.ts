@@ -43,9 +43,7 @@ export const routeMeta: RouteMeta = {
 
     <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
       <ng-container *ngFor="let tip of tips">
-        <a [routerLink]="tip.slug">
-          <app-tip-card class="px-4" [tip]="tip.attributes"></app-tip-card>
-        </a>
+        <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
       </ng-container>
     </main>
   `,
