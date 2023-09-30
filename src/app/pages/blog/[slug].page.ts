@@ -4,6 +4,7 @@ import { AsyncPipe, NgIf, NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { titleResolver } from '../../shared/resolvers/title.resolver';
+import { KofiButtonComponent } from '../../shared/components/kofi-button/kofi-button.component';
 
 export const routeMeta: RouteMeta = {
   title: titleResolver,
@@ -19,7 +20,14 @@ export interface PostAttributes {
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink, NgTemplateOutlet],
+  imports: [
+    MarkdownComponent,
+    AsyncPipe,
+    NgIf,
+    RouterLink,
+    NgTemplateOutlet,
+    KofiButtonComponent,
+  ],
   template: `
     <ng-container *ngIf="post$ | async as post">
       <article
@@ -30,6 +38,11 @@ export interface PostAttributes {
           class="markdown"
           [content]="post.content"
         ></analog-markdown>
+        <p class="mb-0">
+          If you enjoyed this post and found it useful, consider buying me a
+          coffee. Thanks in advance!
+        </p>
+        <app-kofi-button />
         <ng-template [ngTemplateOutlet]="backButton"></ng-template>
       </article>
       <ng-template #backButton>
