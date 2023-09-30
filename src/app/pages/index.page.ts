@@ -13,7 +13,7 @@ export const routeMeta: RouteMeta = {
   template: `
     <div class="flex flex-col md:mt-12 mt-6">
       <h1
-        class="font-montserrat lg:text-6xl text-4xl font-bold my-6 px-4 text-center"
+        class="font-montserrat lg:text-6xl text-4xl font-bold my-6 px-6 text-center"
       >
         Hi, I'm Nelson Gutierrez
       </h1>

@@ -20,7 +20,7 @@ export const routeMeta: RouteMeta = {
       I post these on Twitter.
       <a
         href="https://twitter.com/nelsongutidev"
-        class="text-blue-600 dark:text-blue-500 inline-flex gap-1"
+        class="link link-primary inline-flex gap-1 underline-offset-2 "
         >Follow
         <span class="inline-flex"
           ><svg
