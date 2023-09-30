@@ -16,11 +16,11 @@ export const routeMeta: RouteMeta = {
   template: `
     <app-header [title]="'Tips'" />
 
-    <p class="lg:px-24 px-12 text-xl mt-6">
+    <p class="lg:px-24 px-12 text-xl my-12">
       I post these on Twitter.
       <a
         href="https://twitter.com/nelsongutidev"
-        class="text-blue-600 dark:text-blue-500 inline-flex gap-1"
+        class="link link-primary inline-flex gap-1 underline-offset-2 "
         >Follow
         <span class="inline-flex"
           ><svg
@@ -41,11 +41,9 @@ export const routeMeta: RouteMeta = {
       me if you want to see more of them.
     </p>
 
-    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
+    <main class="flex flex-wrap justify-center gap-6 mb-6 px-4">
       <ng-container *ngFor="let tip of tips">
-        <a [routerLink]="tip.slug">
-          <app-tip-card class="px-4" [tip]="tip.attributes"></app-tip-card>
-        </a>
+        <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
       </ng-container>
     </main>
   `,

@@ -13,7 +13,7 @@ export type Social =
   selector: 'app-social-icon',
   template: `
     <a
-      class="w-full h-full rounded-full overflow-hidden flex items-center justify-center cursor-pointer border border-gray-300 hover:border-cyan-300 transition-colors duration-200 ease-in-out"
+      class="btn btn-outline btn-neutral rounded-full w-12 p-2"
       [href]="link"
       rel="noreferrer"
       target="_blank"

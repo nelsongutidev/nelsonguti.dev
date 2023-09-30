@@ -1,26 +1,30 @@
 <a
   class="flex items-center space-x-2 pt-6 px-6"
   routerLink="/"
-  routerLinkActive="active-link"
+  routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }"
   (click)="navItemClicked.next()"
 >
-  <app-angular-logo></app-angular-logo>
+  <app-angular-logo />
+
   <span
-    class="text-2xl font-thin relative cursor:pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-0.5 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-r before:from-gray-600 before:via-slate-400 before:to-zinc-500 hover:before:w-full hover:before:opacity-100"
+    class="text-2xl relative cursor:pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-0.5 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-r before:from-gray-600 before:via-slate-400 before:to-zinc-500 hover:before:w-full hover:before:opacity-100"
     >nelsonguti.dev</span
   >
 </a>
 <hr class="" />
 <nav class="px-2 text-xl">
-  <app-sidenav-item
-    *ngFor="let item of navItems"
-    [label]="item.label"
-    [svgPath]="item.svgPath"
-    [routerLink]="item.routerLink"
-    [secondSvgPath]="item.secondSvgPath"
-    (click)="navItemClicked.next()"
-  ></app-sidenav-item>
+  <ul class="menu menu-lg">
+    <app-sidenav-item
+      *ngFor="let item of navItems"
+      [label]="item.label"
+      [svgPath]="item.svgPath"
+      [routerLink]="item.routerLink"
+      [secondSvgPath]="item.secondSvgPath"
+      (click)="navItemClicked.next()"
+    ></app-sidenav-item>
+  </ul>
+
   <hr class="m-6" />
   <app-socials></app-socials>
 </nav>

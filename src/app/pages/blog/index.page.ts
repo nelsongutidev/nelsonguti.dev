@@ -25,8 +25,8 @@ export interface PostAttributes {
   template: `
     <app-header [title]="'Blog'" />
 
-    <main class="md:py-8 flex flex-wrap justify-center gap-6 mb-6 px-4">
-      <div *ngFor="let post of posts" class="card w-96 bg-base-200 shadow-xl ">
+    <main class="md:py-8 flex flex-wrap justify-center gap-6 my-12 px-4">
+      <div *ngFor="let post of posts" class="card w-96 bg-base-100 border">
         <div class="card-body">
           <a [routerLink]="['/blog', post.slug]" class="hover:underline">
             <h2 class="card-title">{{ post?.attributes?.title }}</h2></a

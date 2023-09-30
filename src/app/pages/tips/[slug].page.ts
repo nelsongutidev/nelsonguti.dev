@@ -23,9 +23,11 @@ export const routeMeta: RouteMeta = {
   template: `
     <ng-container *ngIf="tip$ | async as tip">
       <article
-        class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-16 w-full px-4"
+        class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-8 w-full px-4"
       >
-        <a routerLink="/tips" class="btn items-center mb-8 w-64 flex flex-row"
+        <a
+          routerLink="/tips"
+          class="btn items-center mb-8 w-64 flex flex-row  btn-outline btn-neutral"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
