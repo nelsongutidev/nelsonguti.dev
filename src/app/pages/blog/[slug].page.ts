@@ -38,6 +38,7 @@ export interface PostAttributes {
           class="markdown"
           [content]="post.content"
         ></analog-markdown>
+        <h3 class="text-2xl mb-2">Support</h3>
         <p class="mb-0">
           If you enjoyed this post and found it useful, consider buying me a
           coffee. Thanks in advance!
