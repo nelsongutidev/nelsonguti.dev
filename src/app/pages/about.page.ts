@@ -52,8 +52,8 @@ export const routeMeta: RouteMeta = {
         </p>
         <h3 class="text-3xl mt-4">Hobbies</h3>
         <p class="m-0 text-lg">
-          I enjoy running, playing soccer, watching NBA games and exoring nature
-          with my family.
+          I enjoy running, playing soccer, watching NBA games and exploring
+          nature with my family.
         </p>
       </div>
     </section>
