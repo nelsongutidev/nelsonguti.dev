@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { HerodevsLogoComponent } from '../shared/components/herodevs-logo/herodevs-logo.component';
+import { AngularLogoComponent } from '../shared/components/angular-logo/angular-logo.component';
 
 export const routeMeta: RouteMeta = {
   title: 'About',
@@ -12,12 +13,6 @@ export const routeMeta: RouteMeta = {
   selector: 'app-about',
   standalone: true,
   host: { class: 'flex flex-col flex-1' },
-  imports: [
-    RouterLink,
-    NgOptimizedImage,
-    HeaderComponent,
-    HerodevsLogoComponent,
-  ],
   template: `
     <app-header [title]="'About Me'" />
 
@@ -36,8 +31,11 @@ export const routeMeta: RouteMeta = {
           </span>
         </h1>
 
-        <h3 class="md:text-2xl text-xl my-4">
-          Along with this, I'm a co-organizer of the
+        <h3 class="text-3xl mt-4 flex gap-2 items-center">
+          <app-angular-logo /> <span>Community</span>
+        </h3>
+        <p class="m-0 text-lg">
+          I'm a co-organizer of the
           <a
             href="https://twitter.com/angular_meetup"
             target="_blank"
@@ -51,10 +49,22 @@ export const routeMeta: RouteMeta = {
             class="link link-hover"
             >Angular Costa Rica Meetups.</a
           >
-        </h3>
+        </p>
+        <h3 class="text-3xl mt-4">Hobbies</h3>
+        <p class="m-0 text-lg">
+          I enjoy running, playing soccer, watching NBA games and exoring nature
+          with my family.
+        </p>
       </div>
     </section>
   `,
+  imports: [
+    RouterLink,
+    NgOptimizedImage,
+    HeaderComponent,
+    HerodevsLogoComponent,
+    AngularLogoComponent,
+  ],
 })
 export default class AboutComponent {
   yearsOfExperience = new Date().getFullYear() - 2017;
