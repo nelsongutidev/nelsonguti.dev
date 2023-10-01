@@ -17,7 +17,7 @@ export const routeMeta: RouteMeta = {
     <app-header [title]="'About Me'" />
 
     <section class="lg:px-24 px-8 py-4 my-8">
-      <div class="flex flex-col gap-8 ">
+      <div class="flex flex-col space-y-8">
         <h1 class="md:text-5xl text-3xl mb-4 pt-2">
           <span
             >I'm currently working as a Senior Software Engineer at
@@ -31,30 +31,32 @@ export const routeMeta: RouteMeta = {
           </span>
         </h1>
 
-        <h3 class="text-3xl mt-4 flex gap-2 items-center">
-          <app-angular-logo /> <span>Community</span>
-        </h3>
-        <p class="m-0 text-lg">
-          I'm a co-organizer of the
-          <a
-            href="https://twitter.com/angular_meetup"
-            target="_blank"
-            class="link link-hover"
-            >Angular Community Meetup (Spanish Chapter)</a
-          >
-          and the
-          <a
-            href="https://twitter.com/AngularCR"
-            target="_blank"
-            class="link link-hover"
-            >Angular Costa Rica Meetups.</a
-          >
-        </p>
-        <h3 class="text-3xl mt-4">Hobbies</h3>
-        <p class="m-0 text-lg">
-          I enjoy running, playing soccer, watching NBA games and exploring
-          nature with my family.
-        </p>
+        <div>
+          <h3 class="text-3xl underline underline-offset-4 mb-4">Community</h3>
+          <p class="m-0 text-lg">
+            I'm a co-organizer of the
+            <a
+              href="https://twitter.com/angular_meetup"
+              target="_blank"
+              class="link link-hover"
+              >Angular Community Meetup (Spanish Chapter)</a
+            >
+            and the
+            <a
+              href="https://twitter.com/AngularCR"
+              target="_blank"
+              class="link link-hover"
+              >Angular Costa Rica Meetups.</a
+            >
+          </p>
+        </div>
+        <div>
+          <h3 class="text-3xl underline underline-offset-4 mb-4">Hobbies</h3>
+          <p class="m-0 text-lg">
+            I enjoy running, playing soccer, watching NBA games and exploring
+            nature with my family.
+          </p>
+        </div>
       </div>
     </section>
   `,
