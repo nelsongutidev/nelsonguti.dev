@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { HeaderComponent } from '../../shared/components/header/header.component';
+import { PostAttributes } from '../../shared/models/post-attributes';
 
 export const routeMeta: RouteMeta = {
   title: 'Tips',
@@ -49,7 +50,7 @@ export const routeMeta: RouteMeta = {
   `,
 })
 export default class TipsPageComponent {
-  readonly tips = injectContentFiles<any>((contentFile: any) => {
+  readonly tips = injectContentFiles<PostAttributes>((contentFile: any) => {
     return (
       contentFile.filename.includes('/src/content/tips') &&
       contentFile.attributes.published

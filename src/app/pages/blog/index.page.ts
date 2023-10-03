@@ -4,19 +4,13 @@ import { injectContentFiles } from '@analogjs/content';
 import { NgFor } from '@angular/common';
 import { RouteMeta } from '@analogjs/router';
 import { HeaderComponent } from '../../shared/components/header/header.component';
+import { PostAttributes } from '../../shared/models/post-attributes';
 
 // TODO: move this to a shared file and type properly
 
 export const routeMeta: RouteMeta = {
   title: 'Blog',
 };
-
-export interface PostAttributes {
-  title: string;
-  slug: string;
-  description: string;
-  coverImage: string;
-}
 
 @Component({
   selector: 'app-blog-list',
@@ -43,5 +37,7 @@ export default class BlogListComponent {
       contentFile.filename.includes('/src/content/blog') &&
       contentFile.attributes.published
     );
-  });
+  })?.sort((a, b) =>
+    new Date(a.attributes.date) > new Date(b.attributes.date) ? -1 : 1
+  );
 }

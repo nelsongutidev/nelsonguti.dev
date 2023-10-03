@@ -16,7 +16,6 @@ import {
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    // class: 'w-full grid grid-cols-3 gap-2 mb-4 justify-items-center',
     class: 'w-full flex justify-center gap-4 mb-4 ',
   },
   standalone: true,
@@ -30,6 +29,5 @@ export class SocialsComponent {
       link: 'https://www.linkedin.com/in/nelsongutidev/',
     },
     { id: 'Twitter' as Social, link: 'https://twitter.com/nelsongutidev' },
-    // { id: 'Youtube' as Social, link: 'https://youtube.com' },
   ];
 }
