@@ -31,7 +31,7 @@
 
 <div class="mockup-code mt-8">
   <div class="mt-4 flex">
-    <div class="flex-1 overflow-x-scroll py-4">
+    <div class="flex-1 py-4 h-auto w-full">
       <pre
         *ngIf="!command.trim().length"
         data-prefix=">"
@@ -40,7 +40,8 @@
       <pre
         *ngIf="command.trim().length > 0"
         data-prefix="$"
-      ><code>{{command}}</code></pre>
+        class="w-full px-4"
+      ><code class="w-full whitespace-normal">{{command}}</code></pre>
     </div>
 
     <svg
