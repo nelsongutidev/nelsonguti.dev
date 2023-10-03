@@ -40,5 +40,19 @@
   <body>
     <app-root></app-root>
     <script type="module" src="/src/main.ts"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XJME1V6BDF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XJME1V6BDF");
+    </script>
   </body>
 </html>
