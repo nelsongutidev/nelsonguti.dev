@@ -5,7 +5,7 @@ import { SocialsComponent } from '../shared/components/social/social.component';
 import { RouteMeta } from '@analogjs/router';
 
 export const routeMeta: RouteMeta = {
-  title: 'Home',
+  title: 'Nelson Gutierrez - Angular Blog',
 };
 @Component({
   selector: 'app-home',
