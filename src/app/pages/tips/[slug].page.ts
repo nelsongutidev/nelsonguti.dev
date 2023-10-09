@@ -71,10 +71,4 @@ export default class TipComponent {
     param: 'slug',
     subdirectory: 'tips',
   });
-
-  ngOnInit() {
-    this.tip$.subscribe((tips) => {
-      console.log(tips);
-    });
-  }
 }

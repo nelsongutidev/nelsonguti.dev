@@ -51,6 +51,7 @@ export default defineConfig(({ mode }) => ({
           '/tips/title-case-pipe',
           '/tips/value-vs-ng-value',
           '/tips/wildcard-routes',
+          '/tips/keycodes',
         ],
       },
     }),
