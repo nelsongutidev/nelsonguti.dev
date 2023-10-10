@@ -12,11 +12,11 @@ path: keycodes
 
 # Keycodes
 
-Angular's CDK provides a module with commonly used keycode constants.
+Angular's CDK provides a module with commonly used keycode constants. These are useful for handling keyboard events in your components.
 
 ```typescript
 import { Directive } from "@angular/core";
-import { UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW } from "@angular/cdk/keycodes";
+import { UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW } from "@angular/cdk/keycodes"; // KEYCODES!
 
 @Directive({
   selector: "[count-arrows]",
@@ -31,7 +31,6 @@ export class ArrowCounterDirective {
   handleKeyPress(event: KeyboardEvent) {
     if ([UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW].includes(event.keyCode)) {
       this.arrowPressCount++;
-      console.log(this.arrowPressCount);
     }
   }
 }
