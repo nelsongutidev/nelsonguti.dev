@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => ({
           '/tips/cdkcontextmenutrigger',
           '/tips/clipboard',
           '/tips/enable-tracing',
-          '/tips/exportAs',
+          '/tips/exportas',
           '/tips/key-value-pipe',
           '/tips/keyboard-events',
           '/tips/ng-for-of',

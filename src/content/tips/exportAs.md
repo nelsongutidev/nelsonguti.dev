@@ -7,6 +7,7 @@ tweetId: ""
 tags: ["Angular"]
 date: "May 2, 2023"
 published: true
+slug: "exportas"
 ---
 
 # exportAs
