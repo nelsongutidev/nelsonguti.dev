@@ -7,6 +7,7 @@ tweetId: ""
 tags: ["Angular", "Angular CDK"]
 date: "August 15, 2023"
 published: true
+slug: "cdkcontextmenutrigger"
 ---
 
 # CdkContextMenuTrigger

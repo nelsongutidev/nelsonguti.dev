@@ -7,7 +7,7 @@ tweetId: ""
 tags: ["Angular", "Angular CDK"]
 date: "Oct 17, 2023"
 published: true
-path: cdkTrapFocus
+slug: "cdktrapfocus"
 ---
 
 # cdkTrapFocus

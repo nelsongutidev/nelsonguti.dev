@@ -7,6 +7,7 @@ tweetId: ""
 tags: ["Angular", "Angular CDK"]
 date: "August 8, 2023"
 published: true
+slug: "cdktextareaautosize"
 ---
 
 # cdkTextareaAutosize
