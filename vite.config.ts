@@ -52,6 +52,7 @@ export default defineConfig(({ mode }) => ({
           '/tips/value-vs-ng-value',
           '/tips/wildcard-routes',
           '/tips/keycodes',
+          '/tips/cdkTrapFocus',
         ],
       },
     }),
