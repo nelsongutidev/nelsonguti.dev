@@ -15,7 +15,10 @@ date: "Nov 15, 2022"
 The ngForOf directive (\*ngFor) not only provides the index exported value, but it also provides other exported values that can be aliased to local variables.
 
 ```html
-<li *ngFor="let user of users; index as i; first as isFirst">{{i}}/{{users.length}}. {{user}} <span *ngIf="isFirst">default</span></li>
+<li *ngFor="let user of users; index as i; first as isFirst">
+  {{i}}/{{users.length}}. {{user}}
+  <span *ngIf="isFirst"> default </span>
+</li>
 ```
 
 Exported values an be aliased to local variables. The following values are exported:
