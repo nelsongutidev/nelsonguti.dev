@@ -53,6 +53,7 @@ export default defineConfig(({ mode }) => ({
           '/tips/wildcard-routes',
           '/tips/keycodes',
           '/tips/cdktrapfocus',
+          '/tips/testing-inputs',
         ],
       },
     }),
