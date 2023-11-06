@@ -5,6 +5,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-angular-logo',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './angular-logo.component.html',
+  template: `<img class="w-10" src="/images/angular_gradient.png" alt="" />`,
 })
 export class AngularLogoComponent {}
