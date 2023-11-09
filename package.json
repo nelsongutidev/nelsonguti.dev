@@ -17,7 +17,7 @@
     "@analogjs/content": "^0.2.0",
     "@analogjs/router": "^0.2.19",
     "@angular/animations": "^17.0.1",
-    "@angular/cdk": "^16.2.6",
+    "@angular/cdk": "^17.0.0",
     "@angular/common": "^17.0.1",
     "@angular/compiler": "^17.0.1",
     "@angular/core": "^17.0.1",
