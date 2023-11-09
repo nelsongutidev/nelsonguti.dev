@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@analogjs/content": "^0.2.0",
-    "@analogjs/router": "^0.2.0",
+    "@analogjs/router": "^0.2.19",
     "@angular/animations": "^17.0.1",
     "@angular/cdk": "^16.2.6",
     "@angular/common": "^17.0.1",
@@ -31,7 +31,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "front-matter": "^4.0.2",
     "marked": "^5.0.2",
-    "marked-gfm-heading-id": "^3.0.4",
+    "marked-gfm-heading-id": "^3.1.0",
     "marked-highlight": "^2.0.1",
     "mermaid": "^10.2.4",
     "prismjs": "^1.29.0",
@@ -40,7 +40,7 @@
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
-    "@analogjs/platform": "^0.2.0",
+    "@analogjs/platform": "^0.2.19",
     "@angular-devkit/build-angular": "^17.0.0",
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.1",
