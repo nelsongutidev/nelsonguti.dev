@@ -7,7 +7,7 @@ alt: "ngForOf code snippet"
 tweetId: "1592597209480323072"
 tags: ["Angular"]
 published: true
-date: "Nov 15, 2023"
+date: "Nov 15, 2022"
 ---
 
 # ngForOf
