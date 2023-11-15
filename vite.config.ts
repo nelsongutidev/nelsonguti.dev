@@ -54,6 +54,7 @@ export default defineConfig(({ mode }) => ({
           '/tips/keycodes',
           '/tips/cdktrapfocus',
           '/tips/testing-inputs',
+          '/tips/for-block-repeaters',
         ],
       },
     }),
