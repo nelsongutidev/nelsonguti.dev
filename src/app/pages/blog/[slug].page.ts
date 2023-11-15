@@ -29,7 +29,8 @@ export interface PostAttributes {
     KofiButtonComponent,
   ],
   template: `
-    <ng-container *ngIf="post$ | async as post">
+    @if (post$ | async; as post) {
+
       <article
         class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-8 w-full px-4"
       >
@@ -67,7 +68,8 @@ export interface PostAttributes {
           <span>Back to Blog Posts</span></a
         >
       </ng-template>
-    </ng-container>
+    
+}
   `,
   host: { class: 'flex justify-center' },
 })

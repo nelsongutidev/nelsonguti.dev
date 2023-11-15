@@ -43,9 +43,11 @@ export const routeMeta: RouteMeta = {
     </p>
 
     <main class="flex flex-wrap justify-center gap-6 mb-6 px-4">
-      <ng-container *ngFor="let tip of tips">
+      @for (tip of tips; track tip) {
+  
         <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
-      </ng-container>
+      
+}
     </main>
   `,
 })

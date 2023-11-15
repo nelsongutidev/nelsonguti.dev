@@ -48,25 +48,30 @@ export const routeMeta: RouteMeta = {
         <mat-form-field class="w-full" appearance="fill">
           <mat-label>Command</mat-label>
           <mat-select [formControl]="commandCtrl">
-            <mat-option *ngFor="let command of commands" [value]="command">
+            @for (command of commands; track command) {
+  <mat-option [value]="command">
               {{ command.shortDescription }}
             </mat-option>
+}
           </mat-select>
         </mat-form-field>
-        <button
-          *ngIf="commandCtrl.value?.longDescription"
+        @if (commandCtrl.value?.longDescription) {
+<button
+         
           class="mb-4 md:block hidden"
           type="button"
           (click)="openDescriptionDialog()"
         >
           <mat-icon>info</mat-icon>
         </button>
+}
       </div>
 
-      <mat-form-field
-        *ngIf="
-          commandCtrl.value?.command && commandCtrl.value?.arguments as argument
-        "
+      @if (
+          commandCtrl.value?.command && commandCtrl.value?.arguments; as argument
+        ) {
+<mat-form-field
+       
         class="w-full"
         appearance="fill"
       >
@@ -77,29 +82,32 @@ export const routeMeta: RouteMeta = {
           [formControl]="commandNameCtrl"
         />
       </mat-form-field>
+}
 
-      <ng-container
-        *ngIf="commandCtrl.value?.subcommands?.length > 0; else commandOptions"
-      >
+      @if (commandCtrl.value?.subcommands?.length > 0) {
+
         <mat-form-field class="w-full" appearance="fill">
           <mat-label>Sub-commands</mat-label>
           <mat-select [formControl]="subCommandCtrl">
-            <mat-option
-              *ngFor="let subCommand of commandCtrl.value?.subcommands"
+            @for (subCommand of commandCtrl.value?.subcommands; track subCommand) {
+  <mat-option
+             
               [value]="subCommand"
             >
               {{ subCommand.shortDescription }}
             </mat-option>
+}
           </mat-select>
         </mat-form-field>
 
         <ng-container *ngIf="subCommand$ | async"></ng-container>
 
-        <mat-form-field
-          *ngIf="
+        @if (
             subCommandCtrl.value?.command &&
-            subCommandCtrl.value?.arguments as argument
-          "
+            subCommandCtrl.value?.arguments; as argument
+          ) {
+<mat-form-field
+         
           class="w-full"
           appearance="fill"
         >
@@ -110,45 +118,78 @@ export const routeMeta: RouteMeta = {
             [formControl]="commandNameCtrl"
           />
         </mat-form-field>
+}
 
-        <mat-form-field
-          *ngIf="
+        @if (
             subCommandCtrl?.value?.parentCommand === commandCtrl?.value?.name &&
             subCommandCtrl?.value?.options?.length > 0
-          "
+          ) {
+<mat-form-field
+         
           class="w-full"
           appearance="fill"
         >
           <mat-label>Subcommand Options</mat-label>
           <mat-select [formControl]="subcommandOptionCtrl" multiple>
-            <mat-option
-              *ngFor="
-                let option of subCommandCtrl?.value.options | filterOption
-              "
+            @for (
+                option of subCommandCtrl?.value.options | filterOption
+              ; track 
+                option) {
+  <mat-option
+             
               [value]="option"
             >
               {{ option.description }}
             </mat-option>
+}
           </mat-select>
         </mat-form-field>
-      </ng-container>
+}
+      
+} @else {
 
-      <ng-template #commandOptions>
-        <mat-form-field
-          *ngIf="commandCtrl.value?.options?.length > 0"
+        @if (commandCtrl.value?.options?.length > 0) {
+<mat-form-field
+         
           class="w-full"
           appearance="fill"
         >
           <mat-label>Options</mat-label>
           <mat-select [formControl]="optionCtrl" multiple>
-            <mat-option
-              *ngFor="let option of commandCtrl?.value?.options | filterOption"
+            @for (option of commandCtrl?.value?.options | filterOption; track option) {
+  <mat-option
+             
               [value]="option"
             >
               {{ option.description }}
             </mat-option>
+}
           </mat-select>
         </mat-form-field>
+}
+      
+}
+
+      <ng-template #commandOptions>
+        @if (commandCtrl.value?.options?.length > 0) {
+<mat-form-field
+         
+          class="w-full"
+          appearance="fill"
+        >
+          <mat-label>Options</mat-label>
+          <mat-select [formControl]="optionCtrl" multiple>
+            @for (option of commandCtrl?.value?.options | filterOption; track option) {
+  <mat-option
+             
+              [value]="option"
+            >
+              {{ option.description }}
+            </mat-option>
+}
+          </mat-select>
+        </mat-form-field>
+}
       </ng-template>
     </div>
 
