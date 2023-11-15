@@ -4,4 +4,5 @@ export interface PostAttributes {
   date: string;
   tags: string[];
   published: boolean;
+  image?: string;
 }

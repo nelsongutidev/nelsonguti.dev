@@ -4,6 +4,7 @@ date: "April 3, 2019"
 published: true
 tags: ["JavaScript"]
 description: "While studying for a Javascript interview, a ran into a challenge that helped me understand closures."
+image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D/300-200
 ---
 
 # Closures Explained with a Practical Example

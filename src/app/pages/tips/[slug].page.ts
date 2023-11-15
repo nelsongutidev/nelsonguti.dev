@@ -21,7 +21,8 @@ export const routeMeta: RouteMeta = {
   selector: 'app-tip',
   standalone: true,
   template: `
-    <ng-container *ngIf="tip$ | async as tip">
+    @if (tip$ | async; as tip) {
+
       <article
         class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-8 w-full px-4"
       >
@@ -55,7 +56,8 @@ export const routeMeta: RouteMeta = {
         </p>
         <app-kofi-button />
       </article>
-    </ng-container>
+    
+}
   `,
   host: { class: 'flex justify-center' },
   imports: [

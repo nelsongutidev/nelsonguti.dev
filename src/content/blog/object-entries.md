@@ -4,6 +4,7 @@ date: "September 1, 2019"
 published: true
 tags: ["JavaScript", "Objects"]
 description: "Object.fromEntries() is here and this is why its awesome"
+image: https://images.unsplash.com/photo-1619410283995-43d9134e7656?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/300-200
 ---
 
 # Object.fromEntries()
@@ -130,9 +131,7 @@ If we needed to again return only the objects of the family members that are fem
 Using Object.entries, which returns an Array of Arrays of the key value pairs in the object provided, we can manipulate the data. Nonetheless, the data now has a different notation or format and it is no longer an Object of Objects but an array of arrays instead.
 
 ```js
-const females = Object.entries(familyMembersObject).filter(
-  ([key, value]) => value.gender === "F"
-);
+const females = Object.entries(familyMembersObject).filter(([key, value]) => value.gender === "F");
 
 console.log(females);
 
@@ -170,9 +169,7 @@ console.log(females);
 This is where Object.fromEntries is handy. By simply passing the array to the Object.fromEntries method, we have the information in the format needed.
 
 ```js
-const females = Object.entries(familyMembersObject).filter(
-  ([key, value]) => value.gender === "F"
-);
+const females = Object.entries(familyMembersObject).filter(([key, value]) => value.gender === "F");
 console.log(Object.fromEntries(females));
 
 /* females = {

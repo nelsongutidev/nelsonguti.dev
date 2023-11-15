@@ -4,6 +4,7 @@ date: "Jan 27, 2019"
 published: true
 tags: ["JavaScript", "Arrays"]
 description: "Array.from() is an awesome method introduced with ES6. This post includes practical examples of how I use it."
+image: https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbXB1dGVyfGVufDB8fDB8fHww%3D/300-200
 ---
 
 # Awesome things that can be done with Array.from()
@@ -25,8 +26,7 @@ If you have an HTML Collection or Nodelist, which are array-like objects, you ca
 ```
 
 ```js
-const lis =
-  document.getElementsByTagName("li"); /*lis is here an HTML collection*/
+const lis = document.getElementsByTagName("li"); /*lis is here an HTML collection*/
 
 const arr = Array.from(lis); /*It is now an array*/
 ```
@@ -52,9 +52,7 @@ console.log(Array.from("Nelson")); /*["N","e","l","s","o","n"]*/
 In my previous post, I used Array.from() to create an array of consecutive numbers.
 
 ```js
-console.log(
-  Array.from({ length: 5 }, (item, index) => index)
-); /* [0, 1, 2, 3, 4] */
+console.log(Array.from({ length: 5 }, (item, index) => index)); /* [0, 1, 2, 3, 4] */
 ```
 
 This is possible because the Array.from() takes an array-like object or iterable object as a first parameter but also an optional second parameter which is a map function.
@@ -64,9 +62,7 @@ In this case, the iterable object is of length 5, and the map function returns t
 Without the map function, the array would look like this:
 
 ```js
-console.log(
-  Array.from({ length: 5 })
-); /* [undefined, undefined, undefined, undefined, undefined] */
+console.log(Array.from({ length: 5 })); /* [undefined, undefined, undefined, undefined, undefined] */
 ```
 
 Now you can see the power of the Array.from(). You can create arrays of whatever length you want and with the map function, you can fill it up with whatever sequences you want.

@@ -4,6 +4,7 @@ description: "Boost your application speed without changing its structure or arc
 published: true
 date: Mar 30, 2023
 tags: ["Angular", "Scully"]
+image: https://miro.medium.com/v2/resize:fit:1400/format:webp/1*OjIbg6pSEsIZx3Z7Sx0Wxg.png
 ---
 
 # How To Add Scully To Your Angular 15 Application
@@ -127,16 +128,16 @@ Folder Structure
 
 ```yaml
 dist
-  /static
-    /about
-      index.html
-    /contact
-      index.html
-    /events
-      index.html
-  404.html
-  index.html
-  ...
+/static
+/about
+index.html
+/contact
+index.html
+/events
+index.html
+404.html
+index.html
+...
 ```
 
 By adding Scully, your application will become faster, because serving static html files speeds up [First Contentful Paint](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint) by providing a pre-rendered asset and allowing for the static asset to be cached in a CDN. You can even do a fun experiment and run your app with Javascript disabled, and you will notice the app still renders.

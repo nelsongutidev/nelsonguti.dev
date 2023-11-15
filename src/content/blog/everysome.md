@@ -4,6 +4,7 @@ date: "Feb 21, 2019"
 published: true
 description: "Two usually forgotten yet handy methods to keep in your bag of tricks"
 tags: ["JavaScript", "Arrays"]
+image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGNvbXB1dGVyfGVufDB8fDB8fHww%3D/300-200
 ---
 
 # The .every() and .some() Array Methods in JS: The Unpopular Pair
@@ -56,9 +57,7 @@ console.log(data.every((i) => i.level === "senior")); // false
 If for example, you want to know if all females have "senior" level, you can combine the .every() method with the .filter() method. You can first filter out the objects that correspond to a female and then use the .every() method:
 
 ```js
-console.log(
-  data.filter((i) => i.gender === "F").every((i) => i.level === "senior")
-); // true
+console.log(data.filter((i) => i.gender === "F").every((i) => i.level === "senior")); // true
 ```
 
 ### Fun fact

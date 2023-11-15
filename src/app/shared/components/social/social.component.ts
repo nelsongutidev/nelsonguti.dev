@@ -8,11 +8,13 @@ import {
 @Component({
   selector: 'app-socials',
   template: `
-    <app-social-icon
-      *ngFor="let social of socials"
+    @for (social of socials; track social) {
+  <app-social-icon
+     
       [socialId]="social.id"
       [link]="social.link"
     ></app-social-icon>
+}
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

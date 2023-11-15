@@ -20,7 +20,16 @@ export const routeMeta: RouteMeta = {
     <app-header [title]="'Blog'" />
 
     <main class="md:py-8 flex flex-wrap justify-center gap-6 my-12 px-4">
-      <div *ngFor="let post of posts" class="card w-96 bg-base-100 border">
+      @for (post of posts; track post) {
+      <div class="card w-96 bg-base-100 border">
+        <figure>
+          <img
+            [routerLink]="['/blog', post.slug]"
+            class="w-full max-h-48 object-cover cursor-pointer"
+            [src]="post.attributes.image"
+            alt="Shoes"
+          />
+        </figure>
         <div class="card-body">
           <a [routerLink]="['/blog', post.slug]" class="hover:underline">
             <h2 class="card-title">{{ post?.attributes?.title }}</h2></a
@@ -28,6 +37,7 @@ export const routeMeta: RouteMeta = {
           <p>{{ post?.attributes?.description }}</p>
         </div>
       </div>
+      }
     </main>
   `,
 })
