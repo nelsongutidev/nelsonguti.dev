@@ -15,14 +15,16 @@
 <hr class="" />
 <nav class="px-2 text-xl">
   <ul class="menu menu-lg">
-    <app-sidenav-item
-      *ngFor="let item of navItems"
+    @for (item of navItems; track item) {
+  <app-sidenav-item
+     
       [label]="item.label"
       [svgPath]="item.svgPath"
       [routerLink]="item.routerLink"
       [secondSvgPath]="item.secondSvgPath"
       (click)="navItemClicked.next()"
     ></app-sidenav-item>
+}
   </ul>
 
   <hr class="m-6" />

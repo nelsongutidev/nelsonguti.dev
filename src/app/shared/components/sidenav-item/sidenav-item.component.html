@@ -13,12 +13,14 @@
       class="w-6 h-6"
     >
       <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="svgPath" />
-      <path
-        *ngIf="secondSvgPath"
+      @if (secondSvgPath) {
+<path
+       
         stroke-linecap="round"
         stroke-linejoin="round"
         [attr.d]="secondSvgPath"
       />
+}
     </svg>
     <span>{{ label }}</span></a
   >
