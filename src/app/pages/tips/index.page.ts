@@ -44,10 +44,10 @@ export const routeMeta: RouteMeta = {
 
     <main class="flex flex-wrap justify-center gap-6 mb-6 px-4">
       @for (tip of tips; track tip) {
-  
-        <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
-      
-}
+
+      <app-tip-card class="px-4" [tip]="tip"></app-tip-card>
+
+      }
     </main>
   `,
 })

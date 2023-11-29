@@ -33,19 +33,16 @@
   <div class="mt-4 flex">
     <div class="flex-1 py-4 h-auto w-full">
       @if (!command.trim().length) {
-<pre
-       
+      <pre
         data-prefix=">"
         class="text-warning"
       ><code>Select an option from the select to get the command...</code></pre>
-}
-      @if (command.trim().length > 0) {
-<pre
-       
+      } @if (command.trim().length > 0) {
+      <pre
         data-prefix="$"
         class="w-full px-4"
       ><code class="w-full whitespace-normal">{{command}}</code></pre>
-}
+      }
     </div>
 
     <svg
