@@ -6,9 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './kofi-button.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class KofiButtonComponent {
-
-}
+export class KofiButtonComponent {}

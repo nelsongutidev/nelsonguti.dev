@@ -9,12 +9,11 @@ import {
   selector: 'app-socials',
   template: `
     @for (social of socials; track social) {
-  <app-social-icon
-     
+    <app-social-icon
       [socialId]="social.id"
       [link]="social.link"
     ></app-social-icon>
-}
+    }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
