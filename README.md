@@ -2,7 +2,7 @@
 
 This project is my personal site, which contains the code tips I create and my blog.
 
-![image](https://github.com/nelsongutidev/nelsonguti.dev/assets/62297014/3e3f508f-ec38-48d2-8255-5797c3487495)
+<img width="1712" alt="image" src="https://github.com/nelsongutidev/nelsonguti.dev/assets/62297014/57dda786-8d3a-4bdc-9dd2-b6060b4798d4">
 
 
 ## Development server
