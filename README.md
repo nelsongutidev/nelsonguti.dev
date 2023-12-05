@@ -1,9 +1,10 @@
 # Personal site made with Analog and DaisyUI
 
-This project is my personal site, which contains the code tips I create and my blog.
+This project is my personal site, which contains the code tips I create and my blog. 
 
 <img width="1712" alt="image" src="https://github.com/nelsongutidev/nelsonguti.dev/assets/62297014/57dda786-8d3a-4bdc-9dd2-b6060b4798d4">
 
+Project currently uses Angular version 17
 
 ## Development server
 
