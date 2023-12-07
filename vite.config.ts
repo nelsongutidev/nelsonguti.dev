@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => ({
           '/blog/how-to-add-scully',
           '/blog/markdown-test',
           '/blog/object-entries',
+          '/blog/standalone-migration',
           '/tips/attribute-binding',
           '/tips/bootstrap-app',
           '/tips/cdkcontextmenutrigger',
