@@ -24,7 +24,10 @@ import {
 })
 export class SocialsComponent {
   socials = [
-    { id: 'Github' as Social, link: 'https://github.com/nelsongutidev' },
+    {
+      id: 'Github' as Social,
+      link: 'https://github.com/nelsongutidev/nelsonguti.dev',
+    },
     {
       id: 'LinkedIn' as Social,
       link: 'https://www.linkedin.com/in/nelsongutidev/',
