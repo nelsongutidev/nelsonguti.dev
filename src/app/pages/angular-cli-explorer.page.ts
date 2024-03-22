@@ -102,12 +102,12 @@ export const routeMeta: RouteMeta = {
           [formControl]="commandNameCtrl"
         />
       </mat-form-field>
-      } @if ( subCommandCtrl?.value?.parentCommand === commandCtrl?.value?.name
-      && subCommandCtrl?.value?.options?.length > 0 ) {
+      } @if ( subCommandCtrl.value?.parentCommand === commandCtrl.value?.name &&
+      subCommandCtrl.value?.options?.length > 0 ) {
       <mat-form-field class="w-full" appearance="fill">
         <mat-label>Subcommand Options</mat-label>
         <mat-select [formControl]="subcommandOptionCtrl" multiple>
-          @for ( option of subCommandCtrl?.value.options | filterOption ; track
+          @for ( option of subCommandCtrl.value.options | filterOption ; track
           option) {
           <mat-option [value]="option">
             {{ option.description }}
@@ -119,7 +119,7 @@ export const routeMeta: RouteMeta = {
       <mat-form-field class="w-full" appearance="fill">
         <mat-label>Options</mat-label>
         <mat-select [formControl]="optionCtrl" multiple>
-          @for (option of commandCtrl?.value?.options | filterOption; track
+          @for (option of commandCtrl.value?.options | filterOption; track
           option) {
           <mat-option [value]="option">
             {{ option.description }}
@@ -134,7 +134,7 @@ export const routeMeta: RouteMeta = {
         <mat-form-field class="w-full" appearance="fill">
           <mat-label>Options</mat-label>
           <mat-select [formControl]="optionCtrl" multiple>
-            @for (option of commandCtrl?.value?.options | filterOption; track
+            @for (option of commandCtrl.value?.options | filterOption; track
             option) {
             <mat-option [value]="option">
               {{ option.description }}
