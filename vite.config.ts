@@ -17,6 +17,11 @@ export default defineConfig(({ mode }) => ({
       vite: {
         inlineStylesExtension: 'scss',
       },
+      content: {
+        prismOptions: {
+          additionalLangs: ['diff'],
+        },
+      },
       prerender: {
         routes: [
           '/',
