@@ -1,7 +1,7 @@
 ---
 title: "The .every() and .some() methods: The Unpopular Pair"
 date: "Feb 21, 2019"
-published: true
+published: false
 description: "Two usually forgotten yet handy methods to keep in your bag of tricks"
 tags: ["JavaScript", "Arrays"]
 ---
@@ -56,9 +56,7 @@ console.log(data.every((i) => i.level === "senior")); // false
 If for example, you want to know if all females have "senior" level, you can combine the .every() method with the .filter() method. You can first filter out the objects that correspond to a female and then use the .every() method:
 
 ```js
-console.log(
-  data.filter((i) => i.gender === "F").every((i) => i.level === "senior")
-); // true
+console.log(data.filter((i) => i.gender === "F").every((i) => i.level === "senior")); // true
 ```
 
 ### Fun fact

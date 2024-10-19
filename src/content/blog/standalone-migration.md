@@ -3,7 +3,7 @@ title: "Angular’s Improved Tooling: Standalone Migration Magic"
 description: "Navigating New Tools and Migration Schematics"
 date: "Oct 27, 2023"
 tags: ["Angular"]
-published: false
+published: true
 ---
 
 # Angular’s Improved Tooling: Standalone Migration Magic
@@ -34,7 +34,7 @@ The standalone migration consists of the following three steps (referred to as m
 
 In order to run the schematic, use the following command.
 
-```bash
+```
 ng generate @angular/core:standalone-migration
 ```
 
