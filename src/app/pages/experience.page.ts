@@ -41,14 +41,16 @@ export const routeMeta: RouteMeta = {
             </svg>
           </div>
           <div
-            class="mb-10"
+            class=""
             [class.timeline-end]="$index === 0 || $index % 2 === 0"
             [class.md:text-end]="!($index % 2 === 0)"
             [class.timeline-start]="!($index % 2 === 0)"
           >
             <time class="font-mono italic">{{ experience.year }}</time>
-            <div class="text-lg font-black">{{ experience.employer }}</div>
-            {{ experience.description }}
+            <div class="text-lg font-black">
+              {{ experience.employer }}
+            </div>
+            <div class="mb-8">{{ experience.description }}</div>
           </div>
           <hr />
         </li>
