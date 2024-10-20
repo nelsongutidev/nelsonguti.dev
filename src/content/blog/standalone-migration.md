@@ -40,7 +40,7 @@ ng generate @angular/core:standalone-migration
 
 After running the command, the CLI will prompt you with the three migration steps as can be seen in the image:
 
-!https://cdn-images-1.medium.com/max/800/1*gQ3YS9LTgapoP2b_QcTdaw.png
+<img src="https://cdn-images-1.medium.com/max/800/1*gQ3YS9LTgapoP2b_QcTdaw.png" />
 
 Using the arrow keys, select the steps and **make sure you run them in the specified order** (_convert-to-standalone_ first, then _prune-ng-modules,_ and lastly _standalone-bootstrap_). \*\*\*\*Along with this, it is important to make sure the project builds correctly between each step.
 
