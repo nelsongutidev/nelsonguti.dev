@@ -62,13 +62,13 @@ export const routeMeta: RouteMeta = {
 })
 export default class ExperienceComponent {
   experiences: Experience[] = [
-    {
-      id: '5',
-      year: 2024,
-      employer: 'Cloudera',
-      description:
-        "Staff Software Developer. I get to work developing and supporting the Front End of Cloudera’s Data Flow Experience, working on two of their amazing platform's products. Technologies: Angular 18, RxJS, NgRx, Playwright, Typescript, Javascript",
-    },
+    // {
+    //   id: '5',
+    //   year: 2024,
+    //   employer: 'Cloudera',
+    //   description:
+    //     "Staff Software Developer. I get to work developing and supporting the Front End of Cloudera’s Data Flow Experience, working on two of their amazing platform's products. Technologies: Angular 18, RxJS, NgRx, Playwright, Typescript, Javascript",
+    // },
     {
       id: '4',
       year: 2022,
