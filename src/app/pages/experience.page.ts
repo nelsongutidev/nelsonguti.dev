@@ -7,6 +7,7 @@ type Experience = {
   year: number;
   description: string;
   employer: string;
+  title: string;
 };
 
 export const routeMeta: RouteMeta = {
@@ -50,7 +51,11 @@ export const routeMeta: RouteMeta = {
             <div class="text-lg font-black">
               {{ experience.employer }}
             </div>
-            <div class="mb-8">{{ experience.description }}</div>
+            <div class="mb-8 font-medium">
+              <span class="italic font-semibold"> {{ experience.title }}</span>
+              <br />
+              {{ experience.description }}
+            </div>
           </div>
           <hr />
         </li>
@@ -62,47 +67,52 @@ export const routeMeta: RouteMeta = {
 })
 export default class ExperienceComponent {
   experiences: Experience[] = [
-    // {
-    //   id: '5',
-    //   year: 2024,
-    //   employer: 'Cloudera',
-    //   description:
-    //     "Staff Software Developer. I get to work developing and supporting the Front End of Cloudera’s Data Flow Experience, working on two of their amazing platform's products. Technologies: Angular 18, RxJS, NgRx, Playwright, Typescript, Javascript",
-    // },
+    {
+      id: '5',
+      year: 2024,
+      employer: 'Cloudera',
+      title: 'Staff Software Engineer',
+      description: `I get to work developing and supporting the Front End of Cloudera’s Data Flow Experience, working on two of their amazing platform's products. Technologies: Angular 18, RxJS, NgRx, Playwright, Typescript, Javascript`,
+    },
     {
       id: '4',
       year: 2022,
       employer: 'Herodevs',
+      title: 'Senior Front End Engineer',
       description:
-        'Senior Front End Developer. Worked migrating enterprise projects from AngularJS to Angular 18, removing all AngularJS code and rewriting it in Angular completely while delivering high-quality code, fully tested and on time. Led a team of 3 Angular Engineers and completed a migration for a well-known client. Worked on a full migration of a 20-year-old .Net System to Angular 18, using Angular’s latest features. Technologies: AngularJS, Angular 18, Jest, CSS/SCSS, RxJS, NgRx, RESTful architectures, Typescript, and Javascript',
+        'Worked migrating enterprise projects from AngularJS to Angular 18, removing all AngularJS code and rewriting it in Angular completely while delivering high-quality code, fully tested and on time. Led a team of 3 Angular Engineers and completed a migration for a well-known client. Worked on a full migration of a 20-year-old .Net System to Angular 18, using Angular’s latest features. Technologies: AngularJS, Angular 18, Jest, CSS/SCSS, RxJS, NgRx, RESTful architectures, Typescript, and Javascript',
     },
     {
       id: '3',
       year: 2021,
       employer: 'Swimlane',
+      title: 'Software Team Lead',
       description:
-        'Software Team Lead. In charge of leading a software delivery team for Swimlane, made up of one Front End Engineer, Back End Engineer and SDET. Worked closely with the UX team in design stages to ensure consistency in the product. Partnered with the Product and Management to estimate, allocate and assign work. Managed execution, priorities, and deadlines for development. Ensured the best practices and high-quality code. Supported the team with complex tasks. Developed new features in the app/platform',
+        'In charge of leading a software delivery team for Swimlane, made up of one Front End Engineer, Back End Engineer and SDET. Worked closely with the UX team in design stages to ensure consistency in the product. Partnered with the Product and Management to estimate, allocate and assign work. Managed execution, priorities, and deadlines for development. Ensured the best practices and high-quality code. Supported the team with complex tasks. Developed new features in the app/platform',
     },
     {
       id: '2',
       year: 2020,
       employer: 'Encora Inc.',
+      title: 'Front End Developer',
       description:
-        "Front End developer. Worked as a Front End Engineer for Swimlane on their amazing product using the following technologies AngularJS, Angular 12, RxJS, NgRx, MongoDB, Cypress, Jasmine/Karma, Web Components, Typescript, Javascript. Along with this, helping as a open source maintainer and contributor for the client's amazing OS Projects.",
+        "Worked as a Front End Engineer for Swimlane on their amazing product using the following technologies AngularJS, Angular 12, RxJS, NgRx, MongoDB, Cypress, Jasmine/Karma, Web Components, Typescript, Javascript. Along with this, helping as a open source maintainer and contributor for the client's amazing OS Projects.",
     },
     {
       id: '1',
       year: 2018,
       employer: 'GFT Technologies',
+      title: 'Mid Front End Developer',
       description:
-        'Mid Front End Developer - Worked on the front end of a challenging project in the financial industry using Angular 7, Angular JS, RxJS, SCSS, Kendo UI, Ag Grid, Typescript and MySQL',
+        'Worked on the front end of a challenging project in the financial industry using Angular 7, Angular JS, RxJS, SCSS, Kendo UI, Ag Grid, Typescript and MySQL',
     },
     {
       id: '0',
       year: 2015,
       employer: 'Intel',
+      title: 'Layout Review Engineer / Front End Developer',
       description:
-        'Layout Review Engineer / Front End Developer - Along with my engineering tasks, I did front end development work. Worked on a reporting web app for our client Intel. The web app was made using: HTML5, CSS3 (CSS Grid), JavaScript (ES6), Graphs.js, Bootstrap 4, Sass, jQuery.',
+        'Along with my engineering tasks, I did front end development work. Worked on a reporting web app for our client Intel. The web app was made using: HTML5, CSS3 (CSS Grid), JavaScript (ES6), Graphs.js, Bootstrap 4, Sass, jQuery.',
     },
   ];
 }
