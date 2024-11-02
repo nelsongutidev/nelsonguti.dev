@@ -30,6 +30,7 @@ import { ThemeSelectorComponent } from './shared/components/theme-selector/theme
 })
 export class AppComponent {
   themeService = inject(ThemeService);
+
   selectedTheme = this.themeService.selectedTheme;
 
   isMenuClosed = true;
