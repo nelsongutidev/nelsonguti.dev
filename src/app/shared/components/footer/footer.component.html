@@ -1,17 +1,11 @@
+@let disableSitenameAnimation = disableSitenameAnimation$ | async;
+
 <footer class="flex flex-col items-center pb-8">
-  <app-svg-sitename-animation></app-svg-sitename-animation>
+  @if(!disableSitenameAnimation) {
+  <app-svg-sitename-animation />
+  }
 
   <img class="w-24" src="/images/angular_wordmark_gradient.png" alt="" />
 
-  <!-- <small class="px-8 text-center">
-    Copyright © {{ currentYear }}. Designed and coded by me. Feel free to
-    <a
-      class="link"
-      href="https://github.com/nelsongutidev/nelsonguti.dev"
-      target="_blank"
-      >fork it</a
-    >
-    and create your own version.
-  </small> -->
   <small class="flex">Using Angular v.{{ VERSION.full }} 🚀</small>
 </footer>
