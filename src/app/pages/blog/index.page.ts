@@ -19,9 +19,9 @@ export const routeMeta: RouteMeta = {
   template: `
     <app-header [title]="'Blog'" />
 
-    <main class="md:py-8 flex flex-wrap justify-center gap-6 my-12 px-4">
+    <main class="md:py-8 flex flex-wrap gap-6 px-12">
       @for (post of posts; track post) {
-      <div class="card w-96 bg-base-100 border">
+      <div class="card w-full bg-base-100 border">
         <div class="card-body">
           <a [routerLink]="['/blog', post.slug]" class="hover:underline">
             <h2 class="card-title">{{ post?.attributes?.title }}</h2></a
