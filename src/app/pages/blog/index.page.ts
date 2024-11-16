@@ -15,7 +15,7 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-blog-list',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NgFor, HeaderComponent],
+  imports: [RouterLink, HeaderComponent],
   template: `
     <app-header [title]="'Blog'" />
 
