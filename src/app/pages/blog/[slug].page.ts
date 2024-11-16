@@ -34,18 +34,15 @@ export interface PostAttributes {
     <article
       class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-8 w-full px-4"
     >
-      <ng-template [ngTemplateOutlet]="backButton"></ng-template>
-      <analog-markdown
-        class="markdown"
-        [content]="post.content"
-      ></analog-markdown>
+      <ng-template [ngTemplateOutlet]="backButton" />
+      <analog-markdown class="markdown" [content]="post.content" />
       <h3 class="text-2xl mb-2">Support</h3>
       <p class="mb-0">
         If you enjoyed this post and found it useful, consider buying me a
         coffee. Thanks in advance!
       </p>
       <app-kofi-button />
-      <ng-template [ngTemplateOutlet]="backButton"></ng-template>
+      <ng-template [ngTemplateOutlet]="backButton" />
     </article>
     <ng-template #backButton>
       <a
