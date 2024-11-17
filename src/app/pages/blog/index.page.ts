@@ -19,7 +19,7 @@ export const routeMeta: RouteMeta = {
   template: `
     <app-header [title]="'Blog'" />
 
-    <main class="md:py-8 flex flex-wrap gap-6 px-12">
+    <main class="md:py-8 md:px-12 flex flex-wrap gap-6 px-4 my-6">
       @for (post of posts; track post) {
       <div class="card w-full bg-base-100 border">
         <div class="card-body">
