@@ -13,10 +13,9 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  selector: 'app-blog-list',
-  standalone: true,
-  imports: [RouterLink, HeaderComponent],
-  template: `
+    selector: 'app-blog-list',
+    imports: [RouterLink, HeaderComponent],
+    template: `
     <app-header [title]="'Blog'" />
 
     <main class="md:py-8 md:px-12 flex flex-wrap gap-6 px-4 my-6">
@@ -31,7 +30,7 @@ export const routeMeta: RouteMeta = {
       </div>
       }
     </main>
-  `,
+  `
 })
 export default class BlogListComponent {
   readonly posts = injectContentFiles<PostAttributes>((contentFile: any) => {

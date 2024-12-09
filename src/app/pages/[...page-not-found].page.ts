@@ -6,9 +6,8 @@ export const routeMeta: RouteMeta = {
   title: '404',
 };
 @Component({
-  standalone: true,
-  imports: [RouterLink],
-  template: `
+    imports: [RouterLink],
+    template: `
     <section class="bg-base-100 md:pt-16 pt-4 flex-col">
       <div class="container flex items-center ">
         <div class="flex flex-col items-center max-w-sm mx-auto text-center">
@@ -60,8 +59,8 @@ export const routeMeta: RouteMeta = {
       </div>
     </section>
   `,
-  host: {
-    class: 'flex flex-col w-full ',
-  },
+    host: {
+        class: 'flex flex-col w-full ',
+    }
 })
 export default class PageNotFoundComponent {}

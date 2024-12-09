@@ -6,8 +6,8 @@ import {
 } from '../social-icon/social-icon.component';
 
 @Component({
-  selector: 'app-socials',
-  template: `
+    selector: 'app-socials',
+    template: `
     @for (social of socials; track social) {
     <app-social-icon
       [socialId]="social.id"
@@ -15,12 +15,11 @@ import {
     ></app-social-icon>
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'w-full flex justify-center gap-4 mb-4 ',
-  },
-  standalone: true,
-  imports: [CommonModule, SocialIconComponent],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'w-full flex justify-center gap-4 mb-4 ',
+    },
+    imports: [CommonModule, SocialIconComponent]
 })
 export class SocialsComponent {
   socials = [
