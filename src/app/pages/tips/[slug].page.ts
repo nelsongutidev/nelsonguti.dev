@@ -18,9 +18,8 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  selector: 'app-tip',
-  standalone: true,
-  template: `
+    selector: 'app-tip',
+    template: `
     @if (tip$ | async; as tip) {
 
     <article
@@ -59,14 +58,14 @@ export const routeMeta: RouteMeta = {
 
     }
   `,
-  host: { class: 'flex justify-center' },
-  imports: [
-    MarkdownComponent,
-    AsyncPipe,
-    NgIf,
-    RouterLink,
-    KofiButtonComponent,
-  ],
+    host: { class: 'flex justify-center' },
+    imports: [
+        MarkdownComponent,
+        AsyncPipe,
+        NgIf,
+        RouterLink,
+        KofiButtonComponent,
+    ]
 })
 export default class TipComponent {
   readonly tip$ = injectContent<any>({

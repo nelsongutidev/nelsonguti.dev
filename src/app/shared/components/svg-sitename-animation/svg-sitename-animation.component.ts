@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Theme, ThemeService } from '../../services/theme.service';
 
 @Component({
-  selector: 'app-svg-sitename-animation',
-  standalone: true,
-  imports: [CommonModule],
-  host: {
-    '[class.dark]': 'selectedTheme() === THEME.DARK',
-    '[class.light]': 'selectedTheme() === THEME.LIGHT',
-  },
-  template: `<svg
+    selector: 'app-svg-sitename-animation',
+    imports: [CommonModule],
+    host: {
+        '[class.dark]': 'selectedTheme() === THEME.DARK',
+        '[class.light]': 'selectedTheme() === THEME.LIGHT',
+    },
+    template: `<svg
     width="467"
     height="61"
     viewBox="0 0 467 61"
@@ -71,8 +70,8 @@ import { Theme, ThemeService } from '../../services/theme.service';
       d="M446.664 48L431.751 14.4H436.487L450.184 45.568H447.944L461.832 14.4H466.311L451.336 48H446.664Z"
     />
   </svg> `,
-  styles: [
-    `
+    styles: [
+        `
       /* PATHS */
 
       :host.light .path {
@@ -229,7 +228,7 @@ import { Theme, ThemeService } from '../../services/theme.service';
         }
       }
     `,
-  ],
+    ]
 })
 export class SvgSitenameAnimationComponent {
   themeService = inject(ThemeService);

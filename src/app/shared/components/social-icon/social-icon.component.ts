@@ -10,8 +10,8 @@ export type Social =
   | 'Youtube';
 
 @Component({
-  selector: 'app-social-icon',
-  template: `
+    selector: 'app-social-icon',
+    template: `
     <a
       class="btn btn-outline btn-neutral rounded-full w-12 p-2"
       [href]="link"
@@ -78,12 +78,11 @@ export type Social =
       </svg>
     </a>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'w-10 h-10',
-  },
-  standalone: true,
-  imports: [CommonModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'w-10 h-10',
+    },
+    imports: [CommonModule]
 })
 export class SocialIconComponent {
   @Input() socialId: Social = 'Github';

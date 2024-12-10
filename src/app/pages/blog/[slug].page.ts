@@ -18,17 +18,16 @@ export interface PostAttributes {
 }
 
 @Component({
-  selector: 'app-blog-post',
-  standalone: true,
-  imports: [
-    MarkdownComponent,
-    AsyncPipe,
-    NgIf,
-    RouterLink,
-    NgTemplateOutlet,
-    KofiButtonComponent,
-  ],
-  template: `
+    selector: 'app-blog-post',
+    imports: [
+        MarkdownComponent,
+        AsyncPipe,
+        NgIf,
+        RouterLink,
+        NgTemplateOutlet,
+        KofiButtonComponent,
+    ],
+    template: `
     @if (post$ | async; as post) {
 
     <article
@@ -68,7 +67,7 @@ export interface PostAttributes {
 
     }
   `,
-  host: { class: 'flex justify-center' },
+    host: { class: 'flex justify-center' }
 })
 export default class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>({

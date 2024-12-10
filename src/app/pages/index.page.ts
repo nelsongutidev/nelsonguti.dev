@@ -9,9 +9,8 @@ export const routeMeta: RouteMeta = {
   title: 'Nelson Gutierrez - Angular Blog',
 };
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  template: `
+    selector: 'app-home',
+    template: `
     <div class="flex flex-col md:mt-12 mt-6">
       <h1 class="flex justify-center">
         <app-svg-sitename-animation />
@@ -53,12 +52,12 @@ export const routeMeta: RouteMeta = {
       </div>
     </div>
   `,
-  host: { class: 'flex flex-col' },
-  imports: [
-    RouterLink,
-    NgOptimizedImage,
-    SocialsComponent,
-    SvgSitenameAnimationComponent,
-  ],
+    host: { class: 'flex flex-col' },
+    imports: [
+        RouterLink,
+        NgOptimizedImage,
+        SocialsComponent,
+        SvgSitenameAnimationComponent,
+    ]
 })
 export default class HomeComponent {}
