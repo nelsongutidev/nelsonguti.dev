@@ -6,11 +6,10 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule, SvgSitenameAnimationComponent],
-  templateUrl: './footer.component.html',
-  styles: [],
+    selector: 'app-footer',
+    imports: [CommonModule, SvgSitenameAnimationComponent],
+    templateUrl: './footer.component.html',
+    styles: []
 })
 export class FooterComponent {
   protected readonly VERSION = VERSION;

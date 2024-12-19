@@ -11,10 +11,9 @@ export const routeMeta: RouteMeta = {
   title: 'Tips',
 };
 @Component({
-  selector: 'app-tips-list',
-  standalone: true,
-  imports: [TipCardComponent, RouterModule, NgFor, HeaderComponent],
-  template: `
+    selector: 'app-tips-list',
+    imports: [TipCardComponent, RouterModule, NgFor, HeaderComponent],
+    template: `
     <app-header [title]="'Tips'" />
 
     <p class="lg:px-24 px-12 text-xl my-12">
@@ -49,7 +48,7 @@ export const routeMeta: RouteMeta = {
 
       }
     </main>
-  `,
+  `
 })
 export default class TipsPageComponent {
   readonly tips = injectContentFiles<PostAttributes>((contentFile: any) => {

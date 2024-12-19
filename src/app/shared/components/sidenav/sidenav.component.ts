@@ -13,16 +13,15 @@ type NavItem = {
 };
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  imports: [
-    CommonModule,
-    RouterModule,
-    AngularLogoComponent,
-    SocialsComponent,
-    SidenavItemComponent,
-  ],
-  standalone: true,
+    selector: 'app-sidenav',
+    templateUrl: './sidenav.component.html',
+    imports: [
+        CommonModule,
+        RouterModule,
+        AngularLogoComponent,
+        SocialsComponent,
+        SidenavItemComponent,
+    ]
 })
 export class SidenavComponent {
   navItems: NavItem[] = [
