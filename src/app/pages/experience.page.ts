@@ -14,10 +14,9 @@ export const routeMeta: RouteMeta = {
   title: 'Experience',
 };
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  host: { class: 'flex flex-col flex-1' },
-  template: `
+    selector: 'app-experience',
+    host: { class: 'flex flex-col flex-1' },
+    template: `
     <app-header [title]="'Experience'" />
 
     <section class="lg:px-24 px-8 py-4 my-8">
@@ -63,7 +62,7 @@ export const routeMeta: RouteMeta = {
       </ul>
     </section>
   `,
-  imports: [HeaderComponent],
+    imports: [HeaderComponent]
 })
 export default class ExperienceComponent {
   experiences: Experience[] = [
