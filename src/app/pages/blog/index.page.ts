@@ -13,24 +13,25 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-    selector: 'app-blog-list',
-    imports: [RouterLink, HeaderComponent],
-    template: `
+  selector: 'app-blog-list',
+  imports: [RouterLink, HeaderComponent],
+  template: `
     <app-header [title]="'Blog'" />
 
     <main class="md:py-8 md:px-12 flex flex-wrap gap-6 px-4 my-6">
       @for (post of posts; track post) {
-      <div class="card w-full bg-base-100 border">
+      <div class="card w-full bg-base-100 ">
         <div class="card-body">
           <a [routerLink]="['/blog', post.slug]" class="hover:underline">
             <h2 class="card-title">{{ post?.attributes?.title }}</h2></a
           >
           <p>{{ post?.attributes?.description }}</p>
+          <p class="italic">{{ post?.attributes?.date }}</p>
         </div>
       </div>
       }
     </main>
-  `
+  `,
 })
 export default class BlogListComponent {
   readonly posts = injectContentFiles<PostAttributes>((contentFile: any) => {
